@@ -33,11 +33,17 @@ dependencies {
     // Security
     implementation 'org.springframework.boot:spring-boot-starter-security'
 
+    // OAuth2 Client
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
     // validation
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
     // Swagger
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
+
+    // WEB
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 
     // Lombok
     compileOnly 'org.projectlombok:lombok'
