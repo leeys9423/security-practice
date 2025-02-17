@@ -2,6 +2,7 @@ package com.example.securitypractice.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -25,4 +26,15 @@ public class SocialAccount extends BaseTimeEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
+
+    @Builder
+    public SocialAccount(SocialProvider provider, String socialId) {
+        this.provider = provider;
+        this.socialId = socialId;
+    }
+
+    @SuppressWarnings("lombok")
+    public void setMember(Member member) {
+        this.member = member;
+    }
 }
